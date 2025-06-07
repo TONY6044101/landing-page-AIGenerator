@@ -3,90 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GeneratorImage - Acesso Vitalício</title>
+  <title>Generator Image Vitalício</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f8ff;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
     }
     .container {
-      max-width: 600px;
-      margin: auto;
-      padding: 40px 20px;
-      background-color: white;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      background: #fff;
+      padding: 40px 30px;
       border-radius: 12px;
-      margin-top: 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
     }
     h1 {
-      color: #202020;
+      color: #222;
+      margin-bottom: 20px;
       font-size: 28px;
     }
     p {
-      line-height: 1.7;
-      color: #333;
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    ul {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 20px;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #444;
+      padding-left: 20px;
+      position: relative;
+    }
+    ul li::before {
+      content: '✔️';
+      position: absolute;
+      left: 0;
     }
     .botao {
-      display: block;
-      width: 100%;
-      background-color: #2a8cfd;
+      display: inline-block;
+      background-color: #25d366;
       color: white;
-      text-align: center;
-      padding: 15px;
-      border-radius: 10px;
+      padding: 15px 25px;
       text-decoration: none;
       font-size: 18px;
-      margin-top: 20px;
-      cursor: pointer;
-      border: none;
-    }
-    .pix-box {
-      background-color: #ecf3ff;
-      padding: 20px;
-      border-left: 5px solid #2a8cfd;
-      margin-top: 20px;
       border-radius: 8px;
-      word-break: break-word;
+      transition: background 0.3s;
+      margin-top: 20px;
     }
-    .info {
-      font-size: 14px;
-      margin-top: 15px;
-      color: #555;
+    .botao:hover {
+      background-color: #1ebc57;
+    }
+    .depoimento {
+      background-color: #e6f7ff;
+      border-left: 5px solid #3483fa;
+      padding: 15px;
+      margin-top: 20px;
+      font-style: italic;
+    }
+    .chavepix {
+      background-color: #f8f8f8;
+      border: 1px dashed #999;
+      padding: 10px;
+      margin: 20px 0;
+      font-weight: bold;
+      color: #333;
+      word-break: break-all;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🔓 Acesso Vitalício ao GeneratorImage</h1>
-    <p>Desbloqueie o acesso completo e vitalício à nossa ferramenta de geração de imagens com inteligência artificial. Crie imagens incríveis com um clique, sempre que quiser, sem mensalidade.</p>
-
-    <p><strong>O que você vai receber:</strong></p>
+    <h1>Geração de Imagens com IA - Vitalício</h1>
+    <p>Transforme suas ideias em imagens incríveis com a nossa ferramenta de IA! Acesso vitalício, sem mensalidade, suporte incluso.</p>
+    
+    <p><strong>Você vai receber:</strong></p>
     <ul>
-      <li>✔️ Acesso vitalício à plataforma de geração de imagens</li>
-      <li>✔️ Suporte direto via WhatsApp</li>
-      <li>✔️ Atualizações futuras sem custo</li>
+      <li>Acesso vitalício à ferramenta de geração de imagens por IA</li>
+      <li>Suporte direto via WhatsApp</li>
+      <li>Bônus exclusivo para os primeiros compradores</li>
     </ul>
 
-    <div class="pix-box">
-      <strong>💳 Chave Pix:</strong><br/><br/>
-      <span id="pix-key">tonyzin6044101@gmail.com</span>
+    <div class="depoimento">
+      “Nunca imaginei que poderia criar imagens tão incríveis com tanta facilidade. Valeu cada centavo!” — Cliente satisfeito
     </div>
 
-    <button class="botao" onclick="copyPixKey()">📋 Copiar Chave Pix</button>
-    <a class="botao" style="background-color: #25d366;" href="https://wa.me/5561984846343?text=Olá!+Já+realizei+o+pagamento+do+GeneratorImage+e+quero+enviar+o+comprovante." target="_blank">📎 Enviar Comprovante via WhatsApp</a>
+    <p class="chavepix">Chave Pix: <br> <strong>tonyzin6044101@gmail.com</strong></p>
 
-    <p class="info">Após o pagamento de <strong>R$50,00</strong>, envie o comprovante para o WhatsApp e libere seu acesso. Entregas manuais em até 15 minutos.</p>
+    <a class="botao" href="https://wa.me/5561984846343" target="_blank">
+      Confirmar Pagamento no WhatsApp
+    </a>
   </div>
-
-  <script>
-    function copyPixKey() {
-      const key = document.getElementById("pix-key").textContent;
-      navigator.clipboard.writeText(key).then(() => {
-        alert("Chave Pix copiada com sucesso! Agora cole no app do seu banco para pagar.");
-      });
-    }
-  </script>
 </body>
 </html>
